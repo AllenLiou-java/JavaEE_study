@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 // 進行整個系統的參數設定
 // 設定整個系統context的參數檔位置： WebContent/WEB-INF/web.xml
+// 下面以viewPath參數為範例
 
 @WebServlet("/Vic18")
 public class Vic18 extends HttpServlet {
