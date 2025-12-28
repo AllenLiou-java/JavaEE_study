@@ -7,6 +7,7 @@
 	request.setAttribute("lotto", lotto);
 	
 	// 隱含物件：pageContext，透過setAttribute 將資料送到指定的 include html片段
+	// pageContext 存活在當前頁面，包含include進來的頁面，因為include進來的頁面算在同一頁
 	pageContext.setAttribute("key", "pageContext-value");
 %>
 <!DOCTYPE html>
