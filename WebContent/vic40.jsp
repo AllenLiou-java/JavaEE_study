@@ -13,10 +13,10 @@
 		<title>Vic Big Company</title>
 	</head>
 	<body>
-		Account: <%= member.getAccout() %><br />
+		Account: <%= member.getAccount() %><br />
 		<%
 			Member m2 = (Member)request.getAttribute("member");
-			out.println(m2.getAccout());
+			out.println(m2.getAccount());
 		%>
 		<hr />
 		
