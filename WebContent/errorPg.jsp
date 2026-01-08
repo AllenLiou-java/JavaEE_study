@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		Oops! Server Busy.<br />
-		可透過隱含物件exception 進行錯誤處理
+		可透過隱含物件exception 進行錯誤處理<br />
 		<%
 			out.println(exception);
 		%>>

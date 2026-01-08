@@ -5,7 +5,7 @@ public class Member {
 	private int age;
 	
 	public Member() {
-		this("1", "2", "3");
+		this("init_id", "init_account", "init_realname");
 	}
 	
 	public Member(String id, String account, String realname) {

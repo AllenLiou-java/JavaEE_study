@@ -45,6 +45,6 @@ public class Cust {
 	
 	@Override
 	public String toString() {
-		return realname;
+		return "Vic";
 	}
 }

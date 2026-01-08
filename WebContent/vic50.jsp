@@ -54,7 +54,7 @@
 		${map.k2 }<br />
 		<hr />
 		
-		<p>讀取類別Static</p>
+		<p>讀取類別Static方法</p>
 		${Math.random() }<br />
 		${ VicApi.sayHi(param.who) }
 		<hr />

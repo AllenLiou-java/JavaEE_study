@@ -7,6 +7,7 @@
 	// 驗證pageContext.getRequest() 與 隱含物件 request是否為同一物件
 	HttpServletRequest request2 = (HttpServletRequest)pageContext.getRequest();
 	out.println(String.format("request2 == request: %b", request2 == request));
+	// request2 == request: true 
 	
 	request.getRemoteAddr();
 	request.getQueryString();

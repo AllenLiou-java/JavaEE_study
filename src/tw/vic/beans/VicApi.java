@@ -22,4 +22,11 @@ public class VicApi {
 		
 		return ret;
 	}
+	public static int createScore() {
+		int score = (int)(Math.random()*101);
+		return score;
+	}
+	public static String createPasswd(String plainPW) {
+		return BCrypt.hashpw(plainPW, BCrypt.gensalt());
+	}
 }
