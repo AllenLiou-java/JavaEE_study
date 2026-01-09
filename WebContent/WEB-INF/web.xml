@@ -8,4 +8,8 @@
     	<param-name>viewPath</param-name>
     	<param-value>D:\Vic Documents\eclipse-workspace\JavaEE\VicEE\WebContent\views</param-value>
     </context-param>
+    <context-param>
+    	<param-name>uploadPath</param-name>
+    	<param-value>D:\Vic Documents\eclipse-workspace\JavaEE\VicEE\WebContent\upload</param-value>
+    </context-param>
 </web-app>

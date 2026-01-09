@@ -61,7 +61,7 @@
 	</head>
 	<body>
 		<h1>使用JSTL - sql - 查詢｜刪除資料</h1>
-		<h2>查詢｜刪除 列表</h2>
+		<h2>查詢｜刪除｜修改 列表</h2>
 		<p>需有分頁功能</p>
 		
 		<hr />
@@ -77,6 +77,7 @@
 				<td>tel</td>
 				<td>picUrl</td>
 				<td>Delete</td>
+				<td>Edit</td>
 			</tr>
 			<c:forEach items="${rs.rows }" var="row" varStatus="status">
 				<tr>
@@ -91,6 +92,7 @@
 						}
 					</script>
 					<td><a href="?delId=${row.id }" onclick="return delConfirm('${row.name}')">刪除</a></td>
+					<td><a href="vic60.jsp?editId=${row.id }">修改</a></td>
 				</tr>
 			</c:forEach>
 		</table>

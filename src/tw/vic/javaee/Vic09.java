@@ -12,37 +12,43 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
-//前端有加上 enctype="multipart/form-data"，後端也須加上@MultipartConfig
-//upload dir => D:/Vic Documents/eclipse-workspace/JavaEE/VicEE/WebContent/upload
+/*
+	1. 前端有加上 enctype="multipart/form-data"，後端也須加上@MultipartConfig
+	2. upload dir => D:/Vic Documents/eclipse-workspace/JavaEE/VicEE/WebContent/upload
+*/
 
 @WebServlet("/Vic09")
 @MultipartConfig(
 		location = "D:/Vic Documents/eclipse-workspace/JavaEE/VicEE/WebContent/upload"
 		)
 public class Vic09 extends HttpServlet {
-       
-//    // 父類別會透過 service()，根據request method類型，去調用 doGet() 或 doPost()
-//	@Override
-//	protected void service(HttpServletRequest req, HttpServletResponse resp) 
-//			throws ServletException, IOException {
-//		super.service(req, resp);
-//		System.out.println("service()");
-//	}
-//
-//	// 第一次請求時調用init()，之後就不再調用
-//	@Override
-//	public void init() throws ServletException {
-//
-//		super.init();
-//		System.out.println("init()");
-//	}
 
+/*
+    // 父類別會透過 service()，根據request method類型，去調用 doGet() 或 doPost()
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp) 
+			throws ServletException, IOException {
+		super.service(req, resp);
+		System.out.println("service()");
+	}
+*/
+	
+/*
+	// 第一次請求時調用init()，之後就不再調用
+	@Override
+	public void init() throws ServletException {
 
-//	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
-//			throws ServletException, IOException {
-//		System.out.println("doGet");
-//	}
+		super.init();
+		System.out.println("init()");
+	}
+*/
 
+/*	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
+		System.out.println("doGet");
+	}
+*/
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
@@ -51,19 +57,21 @@ public class Vic09 extends HttpServlet {
 		
 		String prefix = request.getParameter("prefix");
 
+/*
 		// 單一檔案上傳
-//		Part part = request.getPart("upload");
-//		// 檔案類型
-//		String type = part.getContentType();
-//		System.out.println(type);
-//		
-//		// 一般不會使用client端上傳檔案的原檔名
-//		// input上的name值
-//		String name1 = part.getName();
-//		String name2 = part.getSubmittedFileName();
-//		System.out.println(name1 + ":" + name2);
-//		
-//		part.write(createFileName(prefix));
+		Part part = request.getPart("upload");
+		// 檔案類型
+		String type = part.getContentType();
+		System.out.println(type);
+		
+		// 一般不會使用client端上傳檔案的原檔名
+		// input上的name值
+		String name1 = part.getName();
+		String name2 = part.getSubmittedFileName();
+		System.out.println(name1 + ":" + name2);
+		
+		part.write(createFileName(prefix));
+*/
 		
 		// 多檔案上傳
 		Collection<Part> parts = request.getParts();
